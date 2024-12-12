@@ -38,4 +38,5 @@ Dans le serveur DHCP, il y a un onglet réservation
 - remplir les champs demander
 - puis valider
 
-C'est bon vous venez de faire votre premiére réservation, plus qu'a lancer votre machine elle aura directement cette adresse. Même si vous faites, un IPCONFIG /RELEASE & IPCONFIG /RENEW, elle gardera la même adresse.
+C'est bon vous venez de faire votre premiére réservation, plus qu'a lancer votre machine elle aura directement cette adresse. 
+Même si vous faites, un IPCONFIG /RELEASE & IPCONFIG /RENEW, elle gardera la même adresse.
