@@ -28,4 +28,14 @@ Aller dans le menu démarrer, outils d'administration windows, cliquer sur DHCP.
 Faire suivant jusqu'à la confirmation de l'étendu.
 
 ## Changer son IP
-Il faut aller dans les parametres de connexion afin de changer, l'IP de sa machine server, afin que les autres VM puisse obtenir une adresse. 
+Il faut aller dans les parametres de connexion, afin de changer l'IP de sa machine server, pour que les autres VM puisse obtenir une adresse. 
+nous pouvons voir que cela est bon en faisant, un IPCONFIG qui nous prouve bien que la machine à obtenu une adresse IP, ou alors sur le serveur DHCP ou nous pouvons voir, notre utilisateur.
+
+## Réservation IP
+Dans le serveur DHCP, il y a un onglet réservation
+- clique droit dessus
+- réservation
+- remplir les champs demander
+- puis valider
+
+C'est bon vous venez de faire votre premiére réservation, plus qu'a lancer votre machine elle aura directement cette adresse. Même si vous faites, un IPCONFIG /RELEASE & IPCONFIG /RENEW, elle gardera la même adresse.
