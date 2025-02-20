@@ -1,42 +1,59 @@
-# serveur-DHCP
-- Aller sur la VM Windows Server 2022
+# Solution : Gestion de branches GitHub
 
-## Gestionnaire de serveur:
-- Gerer
-- Ajouter des rôles et fonctionnalités
+## Étapes à suivre
 
-### Assistant Ajout rôles et fonctionnalités.
-Suivre l'assistant étapes par étapes
+### 1. Créer un dépôt GitHub
+- Accédez à [GitHub](https://github.com/)
+- Cliquez sur **New repository**
+- Nommez le dépôt **website-flow**
+- Cochez "**Initialize this repository with a README**"
+- Cliquez sur **Create repository**
 
-#### Rôles de serveurs
-- séléctionner "Serveur DHCP"
-- Fonctionnalité (laiser comme c'est)
-Puis installer le serveur.
+### 2. Cloner le dépôt sur votre machine
+```bash
+# Remplacez USERNAME par votre nom d'utilisateur GitHub
+git clone https://github.com/USERNAME/website-flow.git
+cd website-flow
+```
 
-Revenir dans le gestionnaire de serveur, aller sur le drapeau en haut à droite, cliquer dessus, et faire terminer configuration.
+### 3. Créer et basculer sur la branche `cheese`
+```bash
+git checkout -b cheese
+```
 
-Aller dans le menu démarrer, outils d'administration windows, cliquer sur DHCP.
+### 4. Modifier le fichier `README.md`
+Ajoutez une liste de vos fromages à pizza préférés dans `README.md` :
+```markdown
+## Fromages à Pizza préférés
+- Mozzarella
+- Parmesan
+- Gorgonzola
+- Cheddar
+- Emmental
+```
 
-## console DHCP
-- Dérouler la flèche
-- Séléctionner IPv4, puis clique gauche nouvelle étendu.
+### 5. Valider et pousser les modifications
+```bash
+git add README.md
+git commit -m "Ajout de mes fromages à pizza préférés"
+git push origin cheese
+```
 
+### 6. Créer une pull request sur GitHub
+- Allez sur votre dépôt sur GitHub.
+- Cliquez sur "Compare & pull request".
+- Vérifiez les modifications et cliquez sur "Create pull request".
+- Une fois validée, cliquez sur "Merge pull request".
 
-### Assistant nouvelle étendu
-- Donner un nom à l'étendu
-- Mettre une plage d'adresse IP (début et fin)
-Faire suivant jusqu'à la confirmation de l'étendu.
+### 7. Supprimer la branche `cheese`
+```bash
+git branch -d cheese
+git push origin --delete cheese
+```
 
-## Changer son IP
-Il faut aller dans les parametres de connexion, afin de changer l'IP de sa machine server, pour que les autres VM puisse obtenir une adresse. 
-nous pouvons voir que cela est bon en faisant, un IPCONFIG qui nous prouve bien que la machine à obtenu une adresse IP, ou alors sur le serveur DHCP ou nous pouvons voir, notre utilisateur.
-
-## Réservation IP
-Dans le serveur DHCP, il y a un onglet réservation
-- clique droit dessus
-- réservation
-- remplir les champs demander
-- puis valider
-
-C'est bon vous venez de faire votre premiére réservation, plus qu'a lancer votre machine elle aura directement cette adresse. 
-Même si vous faites, un IPCONFIG /RELEASE & IPCONFIG /RENEW, elle gardera la même adresse.
+### 8. Partager le lien du repo avec l'historique des commits
+Votre lien final devrait ressembler à :
+```text
+https://github.com/USERNAME/website-flow/commits
+```
+Remplacez **USERNAME** par votre nom d’utilisateur GitHub et partagez ce lien pour valider votre solution. ✅
